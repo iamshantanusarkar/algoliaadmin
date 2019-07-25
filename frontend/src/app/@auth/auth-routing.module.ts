@@ -13,6 +13,7 @@ const routes: Routes = [
         component: AuthComponent,
         children: [
             { path: 'login', component: LoginComponent },
+            { path: 'register', component: RegisterComponent },
             { path: '**', redirectTo: 'dashloginboard', pathMatch: 'full' }
         ]
     }

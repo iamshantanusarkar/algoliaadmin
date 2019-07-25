@@ -12,7 +12,7 @@ const routes: Routes = [
         children: [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
-            // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             // { path: '**', redirectTo: 'dashboard' }
         ]
     }

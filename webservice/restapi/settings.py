@@ -26,7 +26,7 @@ SECRET_KEY = '6ixhp*x%-t6&wyj5g^x)xy9vm^+*tj+59cs7(dzwx-krqh_t8g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'localhost:3200', '0.0.0.0:3200']
 
 
 # Application definition
@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -140,3 +142,10 @@ JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
     'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3600),
 }
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3200",
+    "http://127.0.0.1:3200"
+]
+
+#CORS_URLS_REGEX = r'^/api/.*$'
