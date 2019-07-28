@@ -20,4 +20,5 @@ const config: ExtraOptions = {
     imports: [ RouterModule.forRoot(routes, config) ],
     exports: [ RouterModule ]
 })
+
 export class AppRoutingModule { }

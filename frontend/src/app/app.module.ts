@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { environment } from './../environments/environment';
-import { JwtModule } from '@auth0/angular-jwt';
-
-import { UserService } from './_services/user.service';
 
 import { ThemeModule } from './@theme/theme.module';
 import { CoreModule } from './@core/core.module';
@@ -29,9 +26,7 @@ import { AppComponent } from './app.component';
     AuthModule,
     PagesModule
   ],
-  providers: [
-    UserService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
