@@ -16,7 +16,7 @@ export class GlobalSettingsComponent implements OnInit {
 
     ngOnInit() {
 
-        this.settingsService.list();
+        this.allSettings = this.settingsService.list();
         console.log(this.allSettings);
         // this.list = this.allSettings[0];
     }
