@@ -54,7 +54,7 @@ export class AuthenticationService {
 
     register(formData: object) {
         console.log(formData);
-        return this.http.post<any>(`${environment.apiUrl}register/`, formData)
+        return this.http.post<any>(`${environment.apiUrl}/${environment.ModuleUrls.auth}/register/`, formData)
             .pipe(map(user => {
                 if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes

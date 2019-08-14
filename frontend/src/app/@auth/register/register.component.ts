@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../auth.service';
+import { AuthenticationService } from '../../_services/auth.service';
 import { CustomValidator } from '../../_services/customvalidators';
 
 @Component({

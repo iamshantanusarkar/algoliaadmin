@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../auth.service';
+import { AuthenticationService } from '../../_services/auth.service';
 
 @Component({
   templateUrl: 'forgot-password.component.html'

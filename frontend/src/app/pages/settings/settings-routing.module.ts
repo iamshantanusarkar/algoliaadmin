@@ -10,9 +10,9 @@ const routes: Routes = [
         path: '',
         component: SettingsComponent,
         children: [
-            { path: 'global-settings', component: GlobalSettingsComponent },
+            { path: '', component: GlobalSettingsComponent },
             { path: 'account-settings', component: AccountSettingsComponent },
-            { path: '', redirectTo: 'global-settings', pathMatch: 'full' },
+            // { path: '', redirectTo: 'global-settings', pathMatch: 'full' },
         ]
     }
 ];
