@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { SettingsService } from '../../../_services/settings.service';
 
@@ -8,16 +9,44 @@ import { SettingsService } from '../../../_services/settings.service';
 
 export class GlobalSettingsComponent implements OnInit {
 
-    allSettings: any;
+    allSettings: any = [];
 
     constructor(
         private settingsService: SettingsService
     ) {}
 
     ngOnInit() {
+        this.loadAllSettings();
+    }
 
-        this.allSettings = this.settingsService.list();
-        console.log(this.allSettings);
-        // this.list = this.allSettings[0];
+    loadAllSettings() {
+        return this.settingsService.listAll().subscribe((data: {}) => {
+            this.allSettings = data;
+        });
+    }
+
+    deleteItem(id) {
+        console.log(id);
+    }
+}
+
+
+@Component({
+    templateUrl: './global-settingsView.component.html',
+})
+
+export class GlobalSettingsViewComponent implements OnInit {
+    id = this.actRoute.snapshot.params['id'];
+    constructor(
+        private settingsService: SettingsService,
+        public actRoute: ActivatedRoute,
+    ) {}
+
+    ngOnInit() {
+        this.getItem(this.id);
+    }
+
+    getItem(id) {
+        console.log(id);
     }
 }

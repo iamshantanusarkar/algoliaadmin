@@ -1,4 +1,19 @@
-Global Settings
-<div *ngFor="let item of allSettings | keyvalue">
-    {{item.key}}:{{item.value}}
-  </div>
+<table class="table">
+	<tr>
+		<th>Actions</th>
+		<th>id</th>
+		<th>apiKey</th>
+		<th>apiToken</th>
+		<th>indexName</th>
+	</tr>
+	<tr *ngFor="let item of allSettings">
+		<td>
+			<a href="/settings/{{item.id}}" class="btn btn-primary btn-sm">View</a>
+			<button (click)="deleteItem(item.id)" class="btn btn-danger btn-sm">Delete</button>
+		</td>
+		<td>{{item.id}}</td>
+		<td>{{item.apiKey}}</td>
+		<td>{{item.apiToken}}</td>
+		<td>{{item.indexName}}</td>
+	</tr>
+</table>

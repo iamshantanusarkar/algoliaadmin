@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Observable, throwError } from 'rxjs';
-import { map, retry, catchError } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError, of } from 'rxjs';
+import { map, filter, retry, catchError } from 'rxjs/operators';
 
-import { Setting } from '../_models/settings'
+import { Setting } from '../_models/settings';
 
 import { environment } from 'src/environments/environment.prod';
 
@@ -11,23 +11,30 @@ import { environment } from 'src/environments/environment.prod';
 export class SettingsService {
     private settingsObservable: Observable<any[]>;
 
-    constructor(private http: HttpClient) {}
+    constructor(
+        private http: HttpClient
+    ) {}
 
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json'
         })
-    }
+    };
 
-    list(): Observable<Setting> {
+    listAll(): Observable<Setting> {
         return this.http.get<Setting>(`${environment.apiUrl}/settings/`)
-            .pipe( retry(1), catchError(this.handleError) )
+            .pipe(
+                map( res => {
+                    return  res;
+                }),
+                catchError(this.handleError)
+            );
     }
 
     // Error handling 
     handleError(error) {
         let errorMessage = '';
-        if(error.error instanceof ErrorEvent) {
+        if (error.error instanceof ErrorEvent) {
         // Get client-side error
             errorMessage = error.error.message;
         } else {
