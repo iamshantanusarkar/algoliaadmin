@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
 from rest_framework.views import APIView
+from rest_framework import generics
 from rest_framework.response import Response
 
 from rest_framework import authentication, permissions
@@ -39,12 +40,12 @@ class globalSettingsView(viewsets.ViewSet):
 class SettingsView(APIView):
 
     authentication_classes = [authentication.TokenAuthentication]
-    permission_classes = [permissions.IsAdminUser]
+    # permission_classes = [permissions.IsAdminUser]
     
     def get(self, request):
         settings = gloobalSettings.objects.all()
         serializer = gloobalSettings(settings, many=True)
-        return Response({"stettings": serializer.data})
+        return Response({"settings": serializer.data})
 
     def post(self, request):
         settings = request.data.get('gloobalSettings')
@@ -55,3 +56,20 @@ class SettingsView(APIView):
             article_saved = serializer.save()
         return Response({"success": "settings '{}' created successfully".format(article_saved.apiKey)})
     
+class SettingsListCreate(generics.ListCreateAPIView):
+
+    queryset = gloobalSettings.objects.all()
+    serializer_class = globalSettingsSerializer
+
+    def list(self, request):
+        # Note the use of `get_queryset()` instead of `self.queryset`
+        queryset = self.get_queryset()
+        serializer = globalSettingsSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+class SettingsRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+
+    serializer_class = globalSettingsSerializer
+    queryset = gloobalSettings.objects.all()
+    # lookup_url_kwarg = 'pk'
+    # lookup_field = 'id'

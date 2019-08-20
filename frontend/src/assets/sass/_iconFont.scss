@@ -1,0 +1,1353 @@
+@import "./iconFontsVariables";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?j0pfnt');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?j0pfnt#iefix') format('embedded-opentype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?j0pfnt') format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?j0pfnt') format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?j0pfnt##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconsactivity {
+  &:before {
+    content: $iconsactivity; 
+  }
+}
+.iconsairplay {
+  &:before {
+    content: $iconsairplay; 
+  }
+}
+.iconsalert-circle {
+  &:before {
+    content: $iconsalert-circle; 
+  }
+}
+.iconsalert-octagon {
+  &:before {
+    content: $iconsalert-octagon; 
+  }
+}
+.iconsalert-triangle {
+  &:before {
+    content: $iconsalert-triangle; 
+  }
+}
+.iconsalign-center {
+  &:before {
+    content: $iconsalign-center; 
+  }
+}
+.iconsalign-justify {
+  &:before {
+    content: $iconsalign-justify; 
+  }
+}
+.iconsalign-left {
+  &:before {
+    content: $iconsalign-left; 
+  }
+}
+.iconsalign-right {
+  &:before {
+    content: $iconsalign-right; 
+  }
+}
+.iconsanchor {
+  &:before {
+    content: $iconsanchor; 
+  }
+}
+.iconsaperture {
+  &:before {
+    content: $iconsaperture; 
+  }
+}
+.iconsarchive {
+  &:before {
+    content: $iconsarchive; 
+  }
+}
+.iconsarrow-down-left {
+  &:before {
+    content: $iconsarrow-down-left; 
+  }
+}
+.iconsarrow-down-right {
+  &:before {
+    content: $iconsarrow-down-right; 
+  }
+}
+.iconsarrow-down {
+  &:before {
+    content: $iconsarrow-down; 
+  }
+}
+.iconsarrow-left {
+  &:before {
+    content: $iconsarrow-left; 
+  }
+}
+.iconsarrow-right {
+  &:before {
+    content: $iconsarrow-right; 
+  }
+}
+.iconsarrow-up-left {
+  &:before {
+    content: $iconsarrow-up-left; 
+  }
+}
+.iconsarrow-up-right {
+  &:before {
+    content: $iconsarrow-up-right; 
+  }
+}
+.iconsarrow-up {
+  &:before {
+    content: $iconsarrow-up; 
+  }
+}
+.iconsaward {
+  &:before {
+    content: $iconsaward; 
+  }
+}
+.iconsbar-chart-2 {
+  &:before {
+    content: $iconsbar-chart-2; 
+  }
+}
+.iconsbar-chart {
+  &:before {
+    content: $iconsbar-chart; 
+  }
+}
+.iconsbattery-charging {
+  &:before {
+    content: $iconsbattery-charging; 
+  }
+}
+.iconsbattery {
+  &:before {
+    content: $iconsbattery; 
+  }
+}
+.iconsbell-off {
+  &:before {
+    content: $iconsbell-off; 
+  }
+}
+.iconsbell {
+  &:before {
+    content: $iconsbell; 
+  }
+}
+.iconsbluetooth {
+  &:before {
+    content: $iconsbluetooth; 
+  }
+}
+.iconsbold {
+  &:before {
+    content: $iconsbold; 
+  }
+}
+.iconsbook-open {
+  &:before {
+    content: $iconsbook-open; 
+  }
+}
+.iconsbook {
+  &:before {
+    content: $iconsbook; 
+  }
+}
+.iconsbookmark {
+  &:before {
+    content: $iconsbookmark; 
+  }
+}
+.iconsbox {
+  &:before {
+    content: $iconsbox; 
+  }
+}
+.iconsbriefcase {
+  &:before {
+    content: $iconsbriefcase; 
+  }
+}
+.iconscalendar {
+  &:before {
+    content: $iconscalendar; 
+  }
+}
+.iconscamera-off {
+  &:before {
+    content: $iconscamera-off; 
+  }
+}
+.iconscamera {
+  &:before {
+    content: $iconscamera; 
+  }
+}
+.iconscheck-circle {
+  &:before {
+    content: $iconscheck-circle; 
+  }
+}
+.iconscheck-square {
+  &:before {
+    content: $iconscheck-square; 
+  }
+}
+.iconscheck {
+  &:before {
+    content: $iconscheck; 
+  }
+}
+.iconschevron-down {
+  &:before {
+    content: $iconschevron-down; 
+  }
+}
+.iconschevron-left {
+  &:before {
+    content: $iconschevron-left; 
+  }
+}
+.iconschevron-right {
+  &:before {
+    content: $iconschevron-right; 
+  }
+}
+.iconschevron-up {
+  &:before {
+    content: $iconschevron-up; 
+  }
+}
+.iconschevrons-down {
+  &:before {
+    content: $iconschevrons-down; 
+  }
+}
+.iconschevrons-left {
+  &:before {
+    content: $iconschevrons-left; 
+  }
+}
+.iconschevrons-right {
+  &:before {
+    content: $iconschevrons-right; 
+  }
+}
+.iconschevrons-up {
+  &:before {
+    content: $iconschevrons-up; 
+  }
+}
+.iconschrome {
+  &:before {
+    content: $iconschrome; 
+  }
+}
+.iconscircle {
+  &:before {
+    content: $iconscircle; 
+  }
+}
+.iconsclipboard {
+  &:before {
+    content: $iconsclipboard; 
+  }
+}
+.iconsclock {
+  &:before {
+    content: $iconsclock; 
+  }
+}
+.iconscloud-drizzle {
+  &:before {
+    content: $iconscloud-drizzle; 
+  }
+}
+.iconscloud-lightning {
+  &:before {
+    content: $iconscloud-lightning; 
+  }
+}
+.iconscloud-off {
+  &:before {
+    content: $iconscloud-off; 
+  }
+}
+.iconscloud-rain {
+  &:before {
+    content: $iconscloud-rain; 
+  }
+}
+.iconscloud-snow {
+  &:before {
+    content: $iconscloud-snow; 
+  }
+}
+.iconscloud {
+  &:before {
+    content: $iconscloud; 
+  }
+}
+.iconscode {
+  &:before {
+    content: $iconscode; 
+  }
+}
+.iconscoffee {
+  &:before {
+    content: $iconscoffee; 
+  }
+}
+.iconscolumns {
+  &:before {
+    content: $iconscolumns; 
+  }
+}
+.iconscommand {
+  &:before {
+    content: $iconscommand; 
+  }
+}
+.iconscompass {
+  &:before {
+    content: $iconscompass; 
+  }
+}
+.iconscopy {
+  &:before {
+    content: $iconscopy; 
+  }
+}
+.iconscorner-down-left {
+  &:before {
+    content: $iconscorner-down-left; 
+  }
+}
+.iconscorner-down-right {
+  &:before {
+    content: $iconscorner-down-right; 
+  }
+}
+.iconscorner-left-down {
+  &:before {
+    content: $iconscorner-left-down; 
+  }
+}
+.iconscorner-left-up {
+  &:before {
+    content: $iconscorner-left-up; 
+  }
+}
+.iconscorner-right-down {
+  &:before {
+    content: $iconscorner-right-down; 
+  }
+}
+.iconscorner-right-up {
+  &:before {
+    content: $iconscorner-right-up; 
+  }
+}
+.iconscorner-up-left {
+  &:before {
+    content: $iconscorner-up-left; 
+  }
+}
+.iconscorner-up-right {
+  &:before {
+    content: $iconscorner-up-right; 
+  }
+}
+.iconscpu {
+  &:before {
+    content: $iconscpu; 
+  }
+}
+.iconscredit-card {
+  &:before {
+    content: $iconscredit-card; 
+  }
+}
+.iconscrop {
+  &:before {
+    content: $iconscrop; 
+  }
+}
+.iconscrosshair {
+  &:before {
+    content: $iconscrosshair; 
+  }
+}
+.iconsdatabase {
+  &:before {
+    content: $iconsdatabase; 
+  }
+}
+.iconsdelete {
+  &:before {
+    content: $iconsdelete; 
+  }
+}
+.iconsdisc {
+  &:before {
+    content: $iconsdisc; 
+  }
+}
+.iconsdollar-sign {
+  &:before {
+    content: $iconsdollar-sign; 
+  }
+}
+.iconsdownload-cloud {
+  &:before {
+    content: $iconsdownload-cloud; 
+  }
+}
+.iconsdownload {
+  &:before {
+    content: $iconsdownload; 
+  }
+}
+.iconsdroplet {
+  &:before {
+    content: $iconsdroplet; 
+  }
+}
+.iconsedit-2 {
+  &:before {
+    content: $iconsedit-2; 
+  }
+}
+.iconsedit-3 {
+  &:before {
+    content: $iconsedit-3; 
+  }
+}
+.iconsedit {
+  &:before {
+    content: $iconsedit; 
+  }
+}
+.iconsexternal-link {
+  &:before {
+    content: $iconsexternal-link; 
+  }
+}
+.iconseye-off {
+  &:before {
+    content: $iconseye-off; 
+  }
+}
+.iconseye {
+  &:before {
+    content: $iconseye; 
+  }
+}
+.iconsfacebook {
+  &:before {
+    content: $iconsfacebook; 
+  }
+}
+.iconsfast-forward {
+  &:before {
+    content: $iconsfast-forward; 
+  }
+}
+.iconsfeather {
+  &:before {
+    content: $iconsfeather; 
+  }
+}
+.iconsfile-minus {
+  &:before {
+    content: $iconsfile-minus; 
+  }
+}
+.iconsfile-plus {
+  &:before {
+    content: $iconsfile-plus; 
+  }
+}
+.iconsfile-text {
+  &:before {
+    content: $iconsfile-text; 
+  }
+}
+.iconsfile {
+  &:before {
+    content: $iconsfile; 
+  }
+}
+.iconsfilm {
+  &:before {
+    content: $iconsfilm; 
+  }
+}
+.iconsfilter {
+  &:before {
+    content: $iconsfilter; 
+  }
+}
+.iconsflag {
+  &:before {
+    content: $iconsflag; 
+  }
+}
+.iconsfolder-minus {
+  &:before {
+    content: $iconsfolder-minus; 
+  }
+}
+.iconsfolder-plus {
+  &:before {
+    content: $iconsfolder-plus; 
+  }
+}
+.iconsfolder {
+  &:before {
+    content: $iconsfolder; 
+  }
+}
+.iconsfrown {
+  &:before {
+    content: $iconsfrown; 
+  }
+}
+.iconsgift {
+  &:before {
+    content: $iconsgift; 
+  }
+}
+.iconsgit-branch {
+  &:before {
+    content: $iconsgit-branch; 
+  }
+}
+.iconsgit-commit {
+  &:before {
+    content: $iconsgit-commit; 
+  }
+}
+.iconsgit-merge {
+  &:before {
+    content: $iconsgit-merge; 
+  }
+}
+.iconsgit-pull-request {
+  &:before {
+    content: $iconsgit-pull-request; 
+  }
+}
+.iconsgithub {
+  &:before {
+    content: $iconsgithub; 
+  }
+}
+.iconsgitlab {
+  &:before {
+    content: $iconsgitlab; 
+  }
+}
+.iconsglobe {
+  &:before {
+    content: $iconsglobe; 
+  }
+}
+.iconsgrid {
+  &:before {
+    content: $iconsgrid; 
+  }
+}
+.iconshard-drive {
+  &:before {
+    content: $iconshard-drive; 
+  }
+}
+.iconshash {
+  &:before {
+    content: $iconshash; 
+  }
+}
+.iconsheadphones {
+  &:before {
+    content: $iconsheadphones; 
+  }
+}
+.iconsheart {
+  &:before {
+    content: $iconsheart; 
+  }
+}
+.iconshelp-circle {
+  &:before {
+    content: $iconshelp-circle; 
+  }
+}
+.iconshexagon {
+  &:before {
+    content: $iconshexagon; 
+  }
+}
+.iconshome {
+  &:before {
+    content: $iconshome; 
+  }
+}
+.iconsimage {
+  &:before {
+    content: $iconsimage; 
+  }
+}
+.iconsinbox {
+  &:before {
+    content: $iconsinbox; 
+  }
+}
+.iconsinfo {
+  &:before {
+    content: $iconsinfo; 
+  }
+}
+.iconsinstagram {
+  &:before {
+    content: $iconsinstagram; 
+  }
+}
+.iconsitalic {
+  &:before {
+    content: $iconsitalic; 
+  }
+}
+.iconskey {
+  &:before {
+    content: $iconskey; 
+  }
+}
+.iconslayers {
+  &:before {
+    content: $iconslayers; 
+  }
+}
+.iconslayout {
+  &:before {
+    content: $iconslayout; 
+  }
+}
+.iconslife-buoy {
+  &:before {
+    content: $iconslife-buoy; 
+  }
+}
+.iconslink-2 {
+  &:before {
+    content: $iconslink-2; 
+  }
+}
+.iconslink {
+  &:before {
+    content: $iconslink; 
+  }
+}
+.iconslinkedin {
+  &:before {
+    content: $iconslinkedin; 
+  }
+}
+.iconslist {
+  &:before {
+    content: $iconslist; 
+  }
+}
+.iconsloader {
+  &:before {
+    content: $iconsloader; 
+  }
+}
+.iconslock {
+  &:before {
+    content: $iconslock; 
+  }
+}
+.iconslog-in {
+  &:before {
+    content: $iconslog-in; 
+  }
+}
+.iconslog-out {
+  &:before {
+    content: $iconslog-out; 
+  }
+}
+.iconsmail {
+  &:before {
+    content: $iconsmail; 
+  }
+}
+.iconsmap-pin {
+  &:before {
+    content: $iconsmap-pin; 
+  }
+}
+.iconsmap {
+  &:before {
+    content: $iconsmap; 
+  }
+}
+.iconsmaximize-2 {
+  &:before {
+    content: $iconsmaximize-2; 
+  }
+}
+.iconsmaximize {
+  &:before {
+    content: $iconsmaximize; 
+  }
+}
+.iconsmeh {
+  &:before {
+    content: $iconsmeh; 
+  }
+}
+.iconsmenu {
+  &:before {
+    content: $iconsmenu; 
+  }
+}
+.iconsmessage-circle {
+  &:before {
+    content: $iconsmessage-circle; 
+  }
+}
+.iconsmessage-square {
+  &:before {
+    content: $iconsmessage-square; 
+  }
+}
+.iconsmic-off {
+  &:before {
+    content: $iconsmic-off; 
+  }
+}
+.iconsmic {
+  &:before {
+    content: $iconsmic; 
+  }
+}
+.iconsminimize-2 {
+  &:before {
+    content: $iconsminimize-2; 
+  }
+}
+.iconsminimize {
+  &:before {
+    content: $iconsminimize; 
+  }
+}
+.iconsminus-circle {
+  &:before {
+    content: $iconsminus-circle; 
+  }
+}
+.iconsminus-square {
+  &:before {
+    content: $iconsminus-square; 
+  }
+}
+.iconsminus {
+  &:before {
+    content: $iconsminus; 
+  }
+}
+.iconsmonitor {
+  &:before {
+    content: $iconsmonitor; 
+  }
+}
+.iconsmoon {
+  &:before {
+    content: $iconsmoon; 
+  }
+}
+.iconsmore-horizontal {
+  &:before {
+    content: $iconsmore-horizontal; 
+  }
+}
+.iconsmore-vertical {
+  &:before {
+    content: $iconsmore-vertical; 
+  }
+}
+.iconsmouse-pointer {
+  &:before {
+    content: $iconsmouse-pointer; 
+  }
+}
+.iconsmove {
+  &:before {
+    content: $iconsmove; 
+  }
+}
+.iconsmusic {
+  &:before {
+    content: $iconsmusic; 
+  }
+}
+.iconsnavigation-2 {
+  &:before {
+    content: $iconsnavigation-2; 
+  }
+}
+.iconsnavigation {
+  &:before {
+    content: $iconsnavigation; 
+  }
+}
+.iconsoctagon {
+  &:before {
+    content: $iconsoctagon; 
+  }
+}
+.iconspackage {
+  &:before {
+    content: $iconspackage; 
+  }
+}
+.iconspaperclip {
+  &:before {
+    content: $iconspaperclip; 
+  }
+}
+.iconspause-circle {
+  &:before {
+    content: $iconspause-circle; 
+  }
+}
+.iconspause {
+  &:before {
+    content: $iconspause; 
+  }
+}
+.iconspen-tool {
+  &:before {
+    content: $iconspen-tool; 
+  }
+}
+.iconspercent {
+  &:before {
+    content: $iconspercent; 
+  }
+}
+.iconsphone-call {
+  &:before {
+    content: $iconsphone-call; 
+  }
+}
+.iconsphone-forwarded {
+  &:before {
+    content: $iconsphone-forwarded; 
+  }
+}
+.iconsphone-incoming {
+  &:before {
+    content: $iconsphone-incoming; 
+  }
+}
+.iconsphone-missed {
+  &:before {
+    content: $iconsphone-missed; 
+  }
+}
+.iconsphone-off {
+  &:before {
+    content: $iconsphone-off; 
+  }
+}
+.iconsphone-outgoing {
+  &:before {
+    content: $iconsphone-outgoing; 
+  }
+}
+.iconsphone {
+  &:before {
+    content: $iconsphone; 
+  }
+}
+.iconspie-chart {
+  &:before {
+    content: $iconspie-chart; 
+  }
+}
+.iconsplay-circle {
+  &:before {
+    content: $iconsplay-circle; 
+  }
+}
+.iconsplay {
+  &:before {
+    content: $iconsplay; 
+  }
+}
+.iconsplus-circle {
+  &:before {
+    content: $iconsplus-circle; 
+  }
+}
+.iconsplus-square {
+  &:before {
+    content: $iconsplus-square; 
+  }
+}
+.iconsplus {
+  &:before {
+    content: $iconsplus; 
+  }
+}
+.iconspocket {
+  &:before {
+    content: $iconspocket; 
+  }
+}
+.iconspower {
+  &:before {
+    content: $iconspower; 
+  }
+}
+.iconsprinter {
+  &:before {
+    content: $iconsprinter; 
+  }
+}
+.iconsradio {
+  &:before {
+    content: $iconsradio; 
+  }
+}
+.iconsrefresh-ccw {
+  &:before {
+    content: $iconsrefresh-ccw; 
+  }
+}
+.iconsrefresh-cw {
+  &:before {
+    content: $iconsrefresh-cw; 
+  }
+}
+.iconsrepeat {
+  &:before {
+    content: $iconsrepeat; 
+  }
+}
+.iconsrewind {
+  &:before {
+    content: $iconsrewind; 
+  }
+}
+.iconsrotate-ccw {
+  &:before {
+    content: $iconsrotate-ccw; 
+  }
+}
+.iconsrotate-cw {
+  &:before {
+    content: $iconsrotate-cw; 
+  }
+}
+.iconsrss {
+  &:before {
+    content: $iconsrss; 
+  }
+}
+.iconssave {
+  &:before {
+    content: $iconssave; 
+  }
+}
+.iconsscissors {
+  &:before {
+    content: $iconsscissors; 
+  }
+}
+.iconssearch {
+  &:before {
+    content: $iconssearch; 
+  }
+}
+.iconssend {
+  &:before {
+    content: $iconssend; 
+  }
+}
+.iconsserver {
+  &:before {
+    content: $iconsserver; 
+  }
+}
+.iconssettings {
+  &:before {
+    content: $iconssettings; 
+  }
+}
+.iconsshare-2 {
+  &:before {
+    content: $iconsshare-2; 
+  }
+}
+.iconsshare {
+  &:before {
+    content: $iconsshare; 
+  }
+}
+.iconsshield-off {
+  &:before {
+    content: $iconsshield-off; 
+  }
+}
+.iconsshield {
+  &:before {
+    content: $iconsshield; 
+  }
+}
+.iconsshopping-bag {
+  &:before {
+    content: $iconsshopping-bag; 
+  }
+}
+.iconsshopping-cart {
+  &:before {
+    content: $iconsshopping-cart; 
+  }
+}
+.iconsshuffle {
+  &:before {
+    content: $iconsshuffle; 
+  }
+}
+.iconssidebar {
+  &:before {
+    content: $iconssidebar; 
+  }
+}
+.iconsskip-back {
+  &:before {
+    content: $iconsskip-back; 
+  }
+}
+.iconsskip-forward {
+  &:before {
+    content: $iconsskip-forward; 
+  }
+}
+.iconsslack {
+  &:before {
+    content: $iconsslack; 
+  }
+}
+.iconsslash {
+  &:before {
+    content: $iconsslash; 
+  }
+}
+.iconssliders {
+  &:before {
+    content: $iconssliders; 
+  }
+}
+.iconssmartphone {
+  &:before {
+    content: $iconssmartphone; 
+  }
+}
+.iconssmile {
+  &:before {
+    content: $iconssmile; 
+  }
+}
+.iconsspeaker {
+  &:before {
+    content: $iconsspeaker; 
+  }
+}
+.iconssquare {
+  &:before {
+    content: $iconssquare; 
+  }
+}
+.iconsstar {
+  &:before {
+    content: $iconsstar; 
+  }
+}
+.iconsstop-circle {
+  &:before {
+    content: $iconsstop-circle; 
+  }
+}
+.iconssun {
+  &:before {
+    content: $iconssun; 
+  }
+}
+.iconssunrise {
+  &:before {
+    content: $iconssunrise; 
+  }
+}
+.iconssunset {
+  &:before {
+    content: $iconssunset; 
+  }
+}
+.iconstablet {
+  &:before {
+    content: $iconstablet; 
+  }
+}
+.iconstag {
+  &:before {
+    content: $iconstag; 
+  }
+}
+.iconstarget {
+  &:before {
+    content: $iconstarget; 
+  }
+}
+.iconsterminal {
+  &:before {
+    content: $iconsterminal; 
+  }
+}
+.iconsthumbs-down {
+  &:before {
+    content: $iconsthumbs-down; 
+  }
+}
+.iconsthumbs-up {
+  &:before {
+    content: $iconsthumbs-up; 
+  }
+}
+.iconstoggle-left {
+  &:before {
+    content: $iconstoggle-left; 
+  }
+}
+.iconstoggle-right {
+  &:before {
+    content: $iconstoggle-right; 
+  }
+}
+.iconstrash-2 {
+  &:before {
+    content: $iconstrash-2; 
+  }
+}
+.iconstrash {
+  &:before {
+    content: $iconstrash; 
+  }
+}
+.iconstrello {
+  &:before {
+    content: $iconstrello; 
+  }
+}
+.iconstrending-down {
+  &:before {
+    content: $iconstrending-down; 
+  }
+}
+.iconstrending-up {
+  &:before {
+    content: $iconstrending-up; 
+  }
+}
+.iconstriangle {
+  &:before {
+    content: $iconstriangle; 
+  }
+}
+.iconstruck {
+  &:before {
+    content: $iconstruck; 
+  }
+}
+.iconstv {
+  &:before {
+    content: $iconstv; 
+  }
+}
+.iconstwitter {
+  &:before {
+    content: $iconstwitter; 
+  }
+}
+.iconstype {
+  &:before {
+    content: $iconstype; 
+  }
+}
+.iconsumbrella {
+  &:before {
+    content: $iconsumbrella; 
+  }
+}
+.iconsunderline {
+  &:before {
+    content: $iconsunderline; 
+  }
+}
+.iconsunlock {
+  &:before {
+    content: $iconsunlock; 
+  }
+}
+.iconsupload-cloud {
+  &:before {
+    content: $iconsupload-cloud; 
+  }
+}
+.iconsupload {
+  &:before {
+    content: $iconsupload; 
+  }
+}
+.iconsuser-check {
+  &:before {
+    content: $iconsuser-check; 
+  }
+}
+.iconsuser-minus {
+  &:before {
+    content: $iconsuser-minus; 
+  }
+}
+.iconsuser-plus {
+  &:before {
+    content: $iconsuser-plus; 
+  }
+}
+.iconsuser-x {
+  &:before {
+    content: $iconsuser-x; 
+  }
+}
+.iconsuser {
+  &:before {
+    content: $iconsuser; 
+  }
+}
+.iconsusers {
+  &:before {
+    content: $iconsusers; 
+  }
+}
+.iconsvideo-off {
+  &:before {
+    content: $iconsvideo-off; 
+  }
+}
+.iconsvideo {
+  &:before {
+    content: $iconsvideo; 
+  }
+}
+.iconsvoicemail {
+  &:before {
+    content: $iconsvoicemail; 
+  }
+}
+.iconsvolume-1 {
+  &:before {
+    content: $iconsvolume-1; 
+  }
+}
+.iconsvolume-2 {
+  &:before {
+    content: $iconsvolume-2; 
+  }
+}
+.iconsvolume-x {
+  &:before {
+    content: $iconsvolume-x; 
+  }
+}
+.iconsvolume {
+  &:before {
+    content: $iconsvolume; 
+  }
+}
+.iconswatch {
+  &:before {
+    content: $iconswatch; 
+  }
+}
+.iconswind {
+  &:before {
+    content: $iconswind; 
+  }
+}
+.iconsx-circle {
+  &:before {
+    content: $iconsx-circle; 
+  }
+}
+.iconsx-octagon {
+  &:before {
+    content: $iconsx-octagon; 
+  }
+}
+.iconsx-square {
+  &:before {
+    content: $iconsx-square; 
+  }
+}
+.iconsx {
+  &:before {
+    content: $iconsx; 
+  }
+}
+.iconsyoutube {
+  &:before {
+    content: $iconsyoutube; 
+  }
+}
+.iconszoom-in {
+  &:before {
+    content: $iconszoom-in; 
+  }
+}
+.iconszoom-out {
+  &:before {
+    content: $iconszoom-out; 
+  }
+}

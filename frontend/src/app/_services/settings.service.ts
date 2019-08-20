@@ -31,6 +31,46 @@ export class SettingsService {
             );
     }
 
+    create(formData: object): Observable<Setting> {
+        return this.http.post<Setting>(`${environment.apiUrl}/settings/`, formData)
+            .pipe(
+                map( res => {
+                    return res;
+                }),
+                catchError(this.handleError)
+            );
+    }
+
+    getDetails(id: any): Observable<Setting> {
+        return this.http.get<Setting>(`${environment.apiUrl}/settings/view/${id}`)
+            .pipe(
+                map( res => {
+                    return  res;
+                }),
+                catchError(this.handleError)
+            );
+    }
+
+    updateEntry(id, formData: object): Observable<Setting> {
+        return this.http.put<Setting>(`${environment.apiUrl}/settings/view/${id}/`, formData)
+            .pipe(
+                map( res => {
+                    return  res;
+                }),
+                catchError(this.handleError)
+            );
+    }
+
+    deleteEntry(id: any): Observable<Setting> {
+        return this.http.delete<Setting>(`${environment.apiUrl}/settings/view/${id}`)
+            .pipe(
+                map( res => {
+                    return  res;
+                }),
+                catchError(this.handleError)
+            );
+    }
+
     // Error handling 
     handleError(error) {
         let errorMessage = '';
@@ -41,7 +81,6 @@ export class SettingsService {
         // Get server-side error
             errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
         }
-        window.alert(errorMessage);
         return throwError(errorMessage);
     }
 

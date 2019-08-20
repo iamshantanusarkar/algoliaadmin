@@ -31,22 +31,22 @@ export class GlobalSettingsComponent implements OnInit {
 }
 
 
-@Component({
-    templateUrl: './global-settingsView.component.html',
-})
+// @Component({
+//     templateUrl: './global-settingsView.component.html',
+// })
 
-export class GlobalSettingsViewComponent implements OnInit {
-    id = this.actRoute.snapshot.params['id'];
-    constructor(
-        private settingsService: SettingsService,
-        public actRoute: ActivatedRoute,
-    ) {}
+// export class GlobalSettingsViewComponent implements OnInit {
+//     id = this.actRoute.snapshot.params['id'];
+//     constructor(
+//         private settingsService: SettingsService,
+//         public actRoute: ActivatedRoute,
+//     ) {}
 
-    ngOnInit() {
-        this.getItem(this.id);
-    }
+//     ngOnInit() {
+//         this.getItem(this.id);
+//     }
 
-    getItem(id) {
-        console.log(id);
-    }
-}
+//     getItem(id) {
+//         console.log(id);
+//     }
+// }
