@@ -16,7 +16,7 @@ const routes: Routes = [
         path: '',
         component: SettingsComponent,
         children: [
-            { path: 'list', component: GlobalSettingsListComponent },
+            { path: '', component: GlobalSettingsListComponent },
             { path: 'view/:id', component: GlobalSettingsDetailsComponent },
             { path: 'create', component: GlobalSettingsCreateComponent },
             { path: 'edit/:id', component: GlobalSettingsUpdateComponent },

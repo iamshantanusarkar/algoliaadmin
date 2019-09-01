@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // selector: 'app-root',
-  template: `<layout-no-header-footer><router-outlet></router-outlet></layout-no-header-footer>`,
+  template: `<div layout-no-header-footer><router-outlet></router-outlet></div>`,
 })
 export class AuthComponent {}

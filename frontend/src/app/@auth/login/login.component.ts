@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
+import { SeoService } from '../../_services/seo.service';
 import { AuthenticationService } from '../../_services/auth.service';
 
 @Component({
@@ -18,13 +19,22 @@ export class LoginComponent implements OnInit {
     title = 'Login';
 
     constructor(
+        private seo: SeoService,
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService
+        private authenticationService: AuthenticationService,
     ) { }
 
     ngOnInit() {
+
+        this.seo.generateTags({
+          title: 'Login',
+          description: '',
+          image: '',
+          slug: 'login'
+        });
+
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
             password: ['', Validators.required]

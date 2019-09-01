@@ -8,25 +8,29 @@ import { CoreModule } from './@core/core.module';
 import { AuthModule } from './@auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 
+import { LoaderService } from './_services/loader.service';
+
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    ThemeModule,
-    CoreModule,
-    AuthModule,
-    PagesModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        HttpClientModule,
+        AppRoutingModule,
+        ThemeModule,
+        CoreModule,
+        AuthModule,
+        PagesModule
+    ],
+    providers: [
+      LoaderService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

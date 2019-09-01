@@ -6,6 +6,7 @@ import { NotFoundComponent } from './pages/miscellaneous/not-found/not-found.com
 import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: '', loadChildren: () => import('./@auth/auth.module').then(m => m.AuthModule) },
     { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
     // { path: '', redirectTo: 'pages', pathMatch: 'full' },

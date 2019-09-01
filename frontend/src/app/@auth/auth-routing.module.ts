@@ -8,6 +8,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LogoutComponent } from './logout/logout.component';
 
+import { NotFoundComponent } from '../pages/miscellaneous/not-found/not-found.component';
+
 const routes: Routes = [
     {
         path: '',
@@ -17,9 +19,12 @@ const routes: Routes = [
             { path: 'register', component: RegisterComponent },
             { path: 'logout', component: LogoutComponent },
             { path: 'forgot-password', component: ForgotPasswordComponent },
-            { path: '**', redirectTo: 'dashloginboard', pathMatch: 'full' }
+            { path: 'reset-password', component: ResetPasswordComponent },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            // { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
         ]
-    }
+    },
+    // { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

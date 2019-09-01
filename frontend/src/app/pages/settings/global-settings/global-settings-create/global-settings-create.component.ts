@@ -49,12 +49,12 @@ export class GlobalSettingsCreateComponent implements OnInit {
         for(let idx in this.f) {
             this.formdata[idx] = this.f[idx].value;
         }
-        
+
         // return false;
         this.settingsService.create(this.formdata)
             .subscribe(
                 data => {
-                    this.router.navigate(['settings/list']);
+                    this.router.navigate(['settings']);
                 },
                 error => {
                     this.error = error;

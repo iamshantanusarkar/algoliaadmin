@@ -53,7 +53,6 @@ export class AuthenticationService {
     }
 
     register(formData: object) {
-        console.log(formData);
         return this.http.post<any>(`${environment.apiUrl}/${environment.ModuleUrls.auth}/register/`, formData)
             .pipe(map(user => {
                 if (user && user.token) {

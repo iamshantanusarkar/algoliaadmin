@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
+import { SeoService } from '../../_services/seo.service';
 import { AuthenticationService } from '../../_services/auth.service';
 import { CustomValidator } from '../../_services/customvalidators';
 
@@ -21,6 +22,7 @@ export class RegisterComponent implements OnInit {
     title = 'Register';
 
     constructor(
+        private seo: SeoService,
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
@@ -28,6 +30,14 @@ export class RegisterComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+
+        this.seo.generateTags({
+          title: 'Register',
+          description: '',
+          image: '',
+          slug: 'register'
+        });
+
         this.registerForm = this.formBuilder.group({
             firstname: ['', Validators.required],
             lastname: ['', Validators.required],

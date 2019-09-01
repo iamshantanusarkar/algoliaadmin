@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-// import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 
 const routes: Routes = [
     {
@@ -15,7 +15,8 @@ const routes: Routes = [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             // { path: '**', redirectTo: 'dashboard' }
         ]
-    }
+    },
+    { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

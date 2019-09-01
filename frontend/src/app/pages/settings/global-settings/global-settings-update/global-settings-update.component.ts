@@ -61,12 +61,12 @@ export class GlobalSettingsUpdateComponent implements OnInit {
         for(let idx in this.f) {
             this.formdata[idx] = this.f[idx].value;
         }
-        
+
         // return false;
         this.settingsService.updateEntry(this.f.id.value, this.formdata)
             .subscribe(
                 data => {
-                    this.router.navigate(['settings/list']);
+                    this.router.navigate(['settings']);
                 },
                 error => {
                     this.error = error;

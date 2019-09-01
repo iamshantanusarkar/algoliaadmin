@@ -26,7 +26,7 @@ SECRET_KEY = '6ixhp*x%-t6&wyj5g^x)xy9vm^+*tj+59cs7(dzwx-krqh_t8g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'localhost:3200', '0.0.0.0:3200']
+ALLOWED_HOSTS = ['localhost', 'localhost:3200', '0.0.0.0:3200', 'localhost:4000', '0.0.0.0:4000']
 
 
 # Application definition
@@ -147,7 +147,9 @@ JWT_AUTH = {
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3200",
-    "http://127.0.0.1:3200"
+    "http://127.0.0.1:3200",
+    "http://localhost:4000",
+    "http://127.0.0.1:4000"
 ]
 
 #CORS_URLS_REGEX = r'^/api/.*$'
