@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { TooltipConfig } from './tooltip.config';
 
 @NgModule({
-  declarations: [],
+  declarations: [ TooltipConfig ],
   imports: [
     CommonModule
   ]
