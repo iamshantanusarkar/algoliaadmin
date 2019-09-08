@@ -3,7 +3,8 @@ import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./@auth/auth.module').then(mod => mod.AuthModule) },
-  { path: '', loadChildren: () => import('./pages/pages.module').then(mod => mod.PagesModule) }
+  { path: '', loadChildren: () => import('./pages/pages.module').then(mod => mod.PagesModule) },
+  { path: '**', redirectTo: 'dashboard' }
 ];
 
 const config: ExtraOptions = {

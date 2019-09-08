@@ -8,13 +8,14 @@ import { TooltipConfig } from './tooltip.config';
 
 @Component({
   selector: '[data-tooltip]',
-  template: ``,
+  template: `<span>Tooltip</span>`,
   host: {
+    role: 'tooltip',
   },
-  styleUrls: ['']
+  styleUrls: ['./tooltip.scss']
 })
 
-export class TooltiComponent implements OnInit, OnChanges {
+export class TooltipComponent implements OnInit, OnChanges {
 
   constructor(
     config: TooltipConfig,

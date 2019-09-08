@@ -13,26 +13,54 @@ import {
   TooltipModule
 } from './components';
 
-const MODULES = [
-  AccordianModule,
+import {
+  LayoutGridWithSidebar,
+  LayoutGridWithoutSidebar,
+  LayoutGridNoHeaderFooter
+} from './layouts';
+
+import {
+  HeaderComponent,
+  FooterComponent,
+  SidebarComponent
+} from './shared';
+
+const COMPONENTS = [
+  // AccordianModule,
   AlertModule,
-  CarouselModule,
-  DatatableModule,
-  DropdownModule,
-  ModalModule,
-  PopoverModule,
-  ToastModule,
-  TooltipModule
+  // CarouselModule,
+  // DatatableModule,
+  // DropdownModule,
+  // ModalModule,
+  // PopoverModule,
+  // ToastModule,
+  // TooltipModule
+];
+
+const LAYOUTS = [
+  LayoutGridWithSidebar,
+  LayoutGridWithoutSidebar,
+  LayoutGridNoHeaderFooter
+];
+
+const SHARED = [
+  HeaderComponent,
+  FooterComponent,
+  SidebarComponent
 ];
 
 @NgModule({
-  declarations: [  ],
+  declarations: [
+    ...LAYOUTS,
+    ...SHARED
+   ],
   imports: [
     CommonModule,
-    ...MODULES
+    ...COMPONENTS,
   ],
   exports: [
-    ...MODULES
+    ...COMPONENTS,
+    ...LAYOUTS
   ],
   providers: [],
   bootstrap: []
