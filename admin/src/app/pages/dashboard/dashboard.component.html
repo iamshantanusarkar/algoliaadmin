@@ -1,4 +1,4 @@
-<p class="red">dashboard works!</p>
+<!-- <p class="red">dashboard works!</p>
 
 <div class="alert" [dismissible]="true" type="success" (close)="closed = true">Here is an alert!!</div>
 
@@ -6,4 +6,384 @@
 
 test
 123456
+ -->
+ <div class="container-fluid p-0">
 
+  <div class="row">
+    <div class="col-12 col-sm-6 col-xl d-flex">
+      <div class="card flex-fill">
+        <div class="card-body py-4">
+          <div class="media">
+            <div class="d-inline-block mt-2 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart feather-lg text-primary"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <div class="media-body">
+              <h3 class="mb-2">2.562</h3>
+              <div class="mb-0">Sales Today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl d-flex">
+      <div class="card flex-fill">
+        <div class="card-body py-4">
+          <div class="media">
+            <div class="d-inline-block mt-2 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity feather-lg text-warning"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <div class="media-body">
+              <h3 class="mb-2">17.212</h3>
+              <div class="mb-0">Visitors Today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl d-flex">
+      <div class="card flex-fill">
+        <div class="card-body py-4">
+          <div class="media">
+            <div class="d-inline-block mt-2 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-lg text-success"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="media-body">
+              <h3 class="mb-2">$ 24.300</h3>
+              <div class="mb-0">Total Earnings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl d-flex">
+      <div class="card flex-fill">
+        <div class="card-body py-4">
+          <div class="media">
+            <div class="d-inline-block mt-2 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag feather-lg text-danger"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <div class="media-body">
+              <h3 class="mb-2">43</h3>
+              <div class="mb-0">Pending Orders</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl d-none d-xxl-flex">
+      <div class="card flex-fill">
+        <div class="card-body py-4">
+          <div class="media">
+            <div class="d-inline-block mt-2 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign feather-lg text-info"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="media-body">
+              <h3 class="mb-2">$ 18.700</h3>
+              <div class="mb-0">Total Revenue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-8 d-flex">
+      <div class="card flex-fill w-100">
+        <div class="card-header">
+          <span class="badge badge-primary float-right">Monthly</span>
+          <h5 class="card-title mb-0">Total Revenue</h5>
+        </div>
+        <div class="card-body">
+          <div class="chart chart-lg"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <canvas id="chartjs-dashboard-line" width="995" height="350" class="chartjs-render-monitor" style="display: block; width: 995px; height: 350px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 d-flex">
+      <div class="card flex-fill w-100">
+        <div class="card-header">
+          <span class="badge badge-info float-right">Today</span>
+          <h5 class="card-title mb-0">Daily feed</h5>
+        </div>
+        <div class="card-body">
+          <div class="media">
+            <img src="img/avatars/avatar-5.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Ashley Briggs">
+            <div class="media-body">
+              <small class="float-right text-navy">5m ago</small>
+              <strong>Ashley Briggs</strong> started following <strong>Stacie Hall</strong><br>
+              <small class="text-muted">Today 7:51 pm</small><br>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media">
+            <img src="img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Chris Wood">
+            <div class="media-body">
+              <small class="float-right text-navy">30m ago</small>
+              <strong>Chris Wood</strong> posted something on <strong>Stacie Hall</strong>'s timeline<br>
+              <small class="text-muted">Today 7:21 pm</small>
+
+              <div class="border text-sm text-muted p-2 mt-1">
+                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing...
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="media">
+            <img src="img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Stacie Hall">
+            <div class="media-body">
+              <small class="float-right text-navy">1h ago</small>
+              <strong>Stacie Hall</strong> posted a new blog<br>
+
+              <small class="text-muted">Today 6:35 pm</small>
+            </div>
+          </div>
+
+          <hr>
+          <a href="#" class="btn btn-primary btn-block">Load more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6 col-xl-4 d-flex">
+      <div class="card flex-fill">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+    </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Calendar</h5>
+        </div>
+        <div class="card-body d-flex">
+          <div class="align-self-center w-100">
+            <div class="chart">
+              <div id="datetimepicker-dashboard"><div class="bootstrap-datetimepicker-widget usetwentyfour"><ul class="list-unstyled"><li class="show"><div class="datepicker"><div class="datepicker-days" style=""><table class="table table-sm"><thead><tr><th class="prev" data-action="previous"><span class="fas fa-chevron-left" title="Previous Month"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Month">September 2019</th><th class="next" data-action="next"><span class="fas fa-chevron-right" title="Next Month"></span></th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td data-action="selectDay" data-day="09/01/2019" class="day weekend">1</td><td data-action="selectDay" data-day="09/02/2019" class="day">2</td><td data-action="selectDay" data-day="09/03/2019" class="day">3</td><td data-action="selectDay" data-day="09/04/2019" class="day">4</td><td data-action="selectDay" data-day="09/05/2019" class="day">5</td><td data-action="selectDay" data-day="09/06/2019" class="day">6</td><td data-action="selectDay" data-day="09/07/2019" class="day weekend">7</td></tr><tr><td data-action="selectDay" data-day="09/08/2019" class="day active today weekend">8</td><td data-action="selectDay" data-day="09/09/2019" class="day">9</td><td data-action="selectDay" data-day="09/10/2019" class="day">10</td><td data-action="selectDay" data-day="09/11/2019" class="day">11</td><td data-action="selectDay" data-day="09/12/2019" class="day">12</td><td data-action="selectDay" data-day="09/13/2019" class="day">13</td><td data-action="selectDay" data-day="09/14/2019" class="day weekend">14</td></tr><tr><td data-action="selectDay" data-day="09/15/2019" class="day weekend">15</td><td data-action="selectDay" data-day="09/16/2019" class="day">16</td><td data-action="selectDay" data-day="09/17/2019" class="day">17</td><td data-action="selectDay" data-day="09/18/2019" class="day">18</td><td data-action="selectDay" data-day="09/19/2019" class="day">19</td><td data-action="selectDay" data-day="09/20/2019" class="day">20</td><td data-action="selectDay" data-day="09/21/2019" class="day weekend">21</td></tr><tr><td data-action="selectDay" data-day="09/22/2019" class="day weekend">22</td><td data-action="selectDay" data-day="09/23/2019" class="day">23</td><td data-action="selectDay" data-day="09/24/2019" class="day">24</td><td data-action="selectDay" data-day="09/25/2019" class="day">25</td><td data-action="selectDay" data-day="09/26/2019" class="day">26</td><td data-action="selectDay" data-day="09/27/2019" class="day">27</td><td data-action="selectDay" data-day="09/28/2019" class="day weekend">28</td></tr><tr><td data-action="selectDay" data-day="09/29/2019" class="day weekend">29</td><td data-action="selectDay" data-day="09/30/2019" class="day">30</td><td data-action="selectDay" data-day="10/01/2019" class="day new">1</td><td data-action="selectDay" data-day="10/02/2019" class="day new">2</td><td data-action="selectDay" data-day="10/03/2019" class="day new">3</td><td data-action="selectDay" data-day="10/04/2019" class="day new">4</td><td data-action="selectDay" data-day="10/05/2019" class="day new weekend">5</td></tr><tr><td data-action="selectDay" data-day="10/06/2019" class="day new weekend">6</td><td data-action="selectDay" data-day="10/07/2019" class="day new">7</td><td data-action="selectDay" data-day="10/08/2019" class="day new">8</td><td data-action="selectDay" data-day="10/09/2019" class="day new">9</td><td data-action="selectDay" data-day="10/10/2019" class="day new">10</td><td data-action="selectDay" data-day="10/11/2019" class="day new">11</td><td data-action="selectDay" data-day="10/12/2019" class="day new weekend">12</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fas fa-chevron-left" title="Previous Year"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Year">2019</th><th class="next" data-action="next"><span class="fas fa-chevron-right" title="Next Year"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectMonth" class="month">Jan</span><span data-action="selectMonth" class="month">Feb</span><span data-action="selectMonth" class="month">Mar</span><span data-action="selectMonth" class="month">Apr</span><span data-action="selectMonth" class="month">May</span><span data-action="selectMonth" class="month">Jun</span><span data-action="selectMonth" class="month">Jul</span><span data-action="selectMonth" class="month">Aug</span><span data-action="selectMonth" class="month active">Sep</span><span data-action="selectMonth" class="month">Oct</span><span data-action="selectMonth" class="month">Nov</span><span data-action="selectMonth" class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fas fa-chevron-left" title="Previous Decade"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Decade">2010-2019</th><th class="next" data-action="next"><span class="fas fa-chevron-right" title="Next Decade"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectYear" class="year old">2009</span><span data-action="selectYear" class="year">2010</span><span data-action="selectYear" class="year">2011</span><span data-action="selectYear" class="year">2012</span><span data-action="selectYear" class="year">2013</span><span data-action="selectYear" class="year">2014</span><span data-action="selectYear" class="year">2015</span><span data-action="selectYear" class="year">2016</span><span data-action="selectYear" class="year">2017</span><span data-action="selectYear" class="year">2018</span><span data-action="selectYear" class="year active">2019</span><span data-action="selectYear" class="year old">2020</span></td></tr></tbody></table></div><div class="datepicker-decades" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fas fa-chevron-left" title="Previous Century"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5">2000-2090</th><th class="next" data-action="next"><span class="fas fa-chevron-right" title="Next Century"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectDecade" class="decade old" data-selection="2006">1990</span><span data-action="selectDecade" class="decade" data-selection="2006">2000</span><span data-action="selectDecade" class="decade active" data-selection="2016">2010</span><span data-action="selectDecade" class="decade" data-selection="2026">2020</span><span data-action="selectDecade" class="decade" data-selection="2036">2030</span><span data-action="selectDecade" class="decade" data-selection="2046">2040</span><span data-action="selectDecade" class="decade" data-selection="2056">2050</span><span data-action="selectDecade" class="decade" data-selection="2066">2060</span><span data-action="selectDecade" class="decade" data-selection="2076">2070</span><span data-action="selectDecade" class="decade" data-selection="2086">2080</span><span data-action="selectDecade" class="decade" data-selection="2096">2090</span><span data-action="selectDecade" class="decade old" data-selection="2106">2100</span></td></tr></tbody></table></div></div></li><li class="picker-switch accordion-toggle"></li></ul></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-4 d-none d-xl-flex">
+      <div class="card flex-fill w-100">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+    </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Weekly sales</h5>
+        </div>
+        <div class="card-body d-flex">
+          <div class="align-self-center w-100">
+            <div class="py-3">
+              <div class="chart chart-xs"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                <canvas id="chartjs-dashboard-pie" width="462" height="150" class="chartjs-render-monitor" style="display: block; width: 462px; height: 150px;"></canvas>
+              </div>
+            </div>
+
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th class="text-right">Revenue</th>
+                  <th class="text-right">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-square-full text-primary"></i> Direct</td>
+                  <td class="text-right">$ 2602</td>
+                  <td class="text-right text-success">+43%</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-square-full text-warning"></i> Affiliate</td>
+                  <td class="text-right">$ 1253</td>
+                  <td class="text-right text-success">+13%</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-square-full text-danger"></i> E-mail</td>
+                  <td class="text-right">$ 541</td>
+                  <td class="text-right text-success">+24%</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-square-full text-dark"></i> Other</td>
+                  <td class="text-right">$ 1465</td>
+                  <td class="text-right text-success">+11%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-4 d-flex">
+      <div class="card flex-fill w-100">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+    </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Appointments</h5>
+        </div>
+        <div class="p-4 bg-light">
+          <h2>You have a meeting today!</h2>
+          <p class="mb-0 text-sm">Your next meeting is in 2 hours. Check your <a href="#">schedule</a> to see the details.</p>
+        </div>
+        <div class="card-body">
+          <ul class="timeline">
+            <li class="timeline-item">
+              <strong>Chat with Carl and Ashley</strong>
+              <span class="float-right text-muted text-sm">30m ago</span>
+              <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu...</p>
+            </li>
+            <li class="timeline-item">
+              <strong>The big launch</strong>
+              <span class="float-right text-muted text-sm">2h ago</span>
+              <p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum
+                nunc...</p>
+            </li>
+            <li class="timeline-item">
+              <strong>Coffee break</strong>
+              <span class="float-right text-muted text-sm">3h ago</span>
+              <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae
+                tortor...</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6 col-xl-8 d-flex">
+      <div class="card flex-fill">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+    </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Latest Projects</h5>
+        </div>
+        <div id="datatables-dashboard-projects_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table id="datatables-dashboard-projects" class="table table-striped my-0 dataTable no-footer" role="grid" aria-describedby="datatables-dashboard-projects_info">
+          <thead>
+            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatables-dashboard-projects" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending">Name</th><th class="d-none d-xl-table-cell sorting" tabindex="0" aria-controls="datatables-dashboard-projects" rowspan="1" colspan="1" aria-label="Start Date: activate to sort column ascending">Start Date</th><th class="d-none d-xl-table-cell sorting" tabindex="0" aria-controls="datatables-dashboard-projects" rowspan="1" colspan="1" aria-label="End Date: activate to sort column ascending">End Date</th><th class="sorting" tabindex="0" aria-controls="datatables-dashboard-projects" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Status</th><th class="d-none d-md-table-cell sorting" tabindex="0" aria-controls="datatables-dashboard-projects" rowspan="1" colspan="1" aria-label="Assignee: activate to sort column ascending">Assignee</th></tr>
+          </thead>
+          <tbody>
+
+
+
+
+
+
+
+
+
+          <tr role="row" class="odd">
+              <td class="sorting_1">Project Apollo</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-success">Done</span></td>
+              <td class="d-none d-md-table-cell">Carl Jenkins</td>
+            </tr><tr role="row" class="even">
+              <td class="sorting_1">Project Fireball</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-danger">Cancelled</span></td>
+              <td class="d-none d-md-table-cell">Bertha Martin</td>
+            </tr><tr role="row" class="odd">
+              <td class="sorting_1">Project Hades</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-success">Done</span></td>
+              <td class="d-none d-md-table-cell">Stacie Hall</td>
+            </tr><tr role="row" class="even">
+              <td class="sorting_1">Project Nitro</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-warning">In progress</span></td>
+              <td class="d-none d-md-table-cell">Carl Jenkins</td>
+            </tr><tr role="row" class="odd">
+              <td class="sorting_1">Project Phoenix</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-success">Done</span></td>
+              <td class="d-none d-md-table-cell">Bertha Martin</td>
+            </tr><tr role="row" class="even">
+              <td class="sorting_1">Project Romeo</td>
+              <td class="d-none d-xl-table-cell">01/01/2018</td>
+              <td class="d-none d-xl-table-cell">31/06/2018</td>
+              <td><span class="badge badge-success">Done</span></td>
+              <td class="d-none d-md-table-cell">Ashley Briggs</td>
+            </tr></tbody>
+        </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="datatables-dashboard-projects_info" role="status" aria-live="polite">Showing 1 to 6 of 9 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="datatables-dashboard-projects_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="datatables-dashboard-projects_previous"><a href="#" aria-controls="datatables-dashboard-projects" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="datatables-dashboard-projects" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="datatables-dashboard-projects" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="datatables-dashboard-projects_next"><a href="#" aria-controls="datatables-dashboard-projects" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-4 d-flex">
+      <div class="card flex-fill w-100">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+    </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Sales / Revenue</h5>
+        </div>
+        <div class="card-body d-flex w-100">
+          <div class="align-self-center chart chart-lg"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <canvas id="chartjs-dashboard-bar" width="462" height="350" class="chartjs-render-monitor" style="display: block; width: 462px; height: 350px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
