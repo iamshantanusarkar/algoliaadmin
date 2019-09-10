@@ -5,12 +5,14 @@
   .sidebar {
     width: 300px;
     z-index: 10;
-    background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
+    // background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
+    background: #242939;
     bottom: 0;
     position: fixed;
     transition: all .2s ease-out;
     top: 0;
     box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+    color: #fff;
   }
 
   .main {

@@ -2,9 +2,9 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {Event, NavigationEnd, Router} from '@angular/router';
 import {BehaviorSubject} from 'rxjs';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class NavService {
-  public appDrawer: any;
+  // public appDrawer: any;
   public currentUrl = new BehaviorSubject<string>(undefined);
 
   constructor(private router: Router) {
@@ -16,10 +16,10 @@ export class NavService {
   }
 
   public closeNav() {
-    this.appDrawer.close();
+    // this.appDrawer.close();
   }
 
   public openNav() {
-    this.appDrawer.open();
+    // this.appDrawer.open();
   }
 }

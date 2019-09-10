@@ -1,22 +1,39 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Router } from '@angular/router';
 import { NavItem } from '../../../_models/navItem';
 import { NavService } from '../../../_services/Navservice';
 
 @Component({
-  selector: 'menu-list-item',
-  templateUrl: './menu-list-item.component.html'
+  selector: '.menu-list-item',
+  templateUrl: './menu-list-item.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 
 export class MenuListItemComponent implements OnInit {
-    @Input() item: NavItem;
-    @Input() depth: number;
+
+  expanded: boolean;
+  @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
+  @Input() item: NavItem;
+  @Input() depth: number;
 
   constructor(
-      public navService: NavService
+    public navService: NavService,
+    public router: Router
   ) { }
 
   ngOnInit() {
+    // console.log(this.item);
+  }
 
+  onItemSelected(item: NavItem) {
+    if (!item.children || !item.children.length) {
+      this.router.navigate([item.route]);
+      this.navService.closeNav();
+    }
+    if (item.children && item.children.length) {
+      this.expanded = !this.expanded;
+    }
   }
 
 }

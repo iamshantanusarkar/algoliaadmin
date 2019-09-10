@@ -1,3 +1,4 @@
 <p>sidebar works!</p>
-<div *ngFor="let item of navItems" >{{item.displayName}}</div>
-<menu-list-item *ngFor="let item of navItems" [item]="item"></menu-list-item>
+<ul class="sidebar-nav">
+  <li class="menu-list-item" [ngClass]="{'menu-list-section': item.itemType=='Section'}" *ngFor="let item of navItems" [item]="item"></li>
+</ul>

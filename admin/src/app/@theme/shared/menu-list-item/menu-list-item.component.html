@@ -1,6 +1,5 @@
-<li>
-    <a href="#">Option1</a>
-    <ul >
-        <menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></menu-list-item>
-    </ul>
-</li>
+<a (click)="onItemSelected(item)">{{item.displayName}}</a>
+<ul *ngIf="item.children && item.itemType != 'Section'">
+  <li class="menu-list-item" *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></li>
+</ul>
+
