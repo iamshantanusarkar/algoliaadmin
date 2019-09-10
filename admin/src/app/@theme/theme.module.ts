@@ -22,7 +22,8 @@ import {
 import {
   HeaderComponent,
   FooterComponent,
-  SidebarComponent
+  SidebarComponent,
+  MenuListItemComponent
 } from './shared';
 
 const COMPONENTS = [
@@ -46,7 +47,8 @@ const LAYOUTS = [
 const SHARED = [
   HeaderComponent,
   FooterComponent,
-  SidebarComponent
+  SidebarComponent,
+  MenuListItemComponent
 ];
 
 @NgModule({
