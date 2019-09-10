@@ -6,6 +6,8 @@ import { ThemeModule } from './@theme/theme.module';
 import { AuthModule } from './@auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 
+import { PendingChangesGuard } from './_guards/pending-changes.guard';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -21,7 +23,7 @@ import { AppComponent } from './app.component';
         AuthModule,
         PagesModule
     ],
-    providers: [],
+    providers: [PendingChangesGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

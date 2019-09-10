@@ -7,7 +7,16 @@ import { NavService } from '../../../_services/Navservice';
 @Component({
   selector: '.menu-list-item',
   templateUrl: './menu-list-item.component.html',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('indicatorRotate', [
+      state('collapsed', style({transform: 'rotate(0deg)'})),
+      state('expanded', style({transform: 'rotate(180deg)'})),
+      transition('expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
+      ),
+    ])
+  ]
 })
 
 export class MenuListItemComponent implements OnInit {
@@ -29,7 +38,7 @@ export class MenuListItemComponent implements OnInit {
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
-      this.navService.closeNav();
+      // this.navService.closeNav();
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;

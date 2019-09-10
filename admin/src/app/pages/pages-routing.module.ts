@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { PendingChangesGuard } from '../_guards/pending-changes.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -12,7 +14,8 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canDeactivate: [PendingChangesGuard]
       }, {
         path: 'settings',
         loadChildren: () => import('./settings/settings.module').then(mod => mod.SettingsModule)
