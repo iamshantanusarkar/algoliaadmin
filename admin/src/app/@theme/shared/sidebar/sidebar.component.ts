@@ -55,9 +55,10 @@ export class SidebarComponent implements OnInit {
           iconName: 'group',
         }
       ]
-    }, {
+    }, 
+    {
       displayName: 'Settings',
-      iconName: 'settings',
+      iconName: 'iconssettings',
       route: 'settings',
     }
   ];

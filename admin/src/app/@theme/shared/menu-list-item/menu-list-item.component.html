@@ -1,5 +1,10 @@
-<a (click)="onItemSelected(item)">{{item.displayName}}</a>
-<ul *ngIf="item.children && item.itemType != 'Section'">
+<a (click)="onItemSelected(item)">
+    <span><i class="icon {{item.iconName}}"></i></span>
+    {{item.displayName}} 
+    <span *ngIf="item.children">
+        <i class="icon iconsarrow-up" [ngClass]="{'iconschevron-up': expanded, 'iconschevron-down': !expanded}"></i>
+    </span>
+</a>
+<ul *ngIf="item.children && item.itemType != 'Section'" [ngClass]="{'expanded': expanded}">
   <li class="menu-list-item" *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></li>
 </ul>
-
