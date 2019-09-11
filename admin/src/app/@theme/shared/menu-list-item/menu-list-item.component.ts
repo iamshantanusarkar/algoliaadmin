@@ -10,9 +10,9 @@ import { NavService } from '../../../_services/Navservice';
   encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('indicatorRotate', [
-      state('collapsed', style({transform: 'rotate(0deg)'})),
-      state('expanded', style({transform: 'rotate(180deg)'})),
-      transition('expanded <=> collapsed',
+      state('open', style({transform: 'rotate(0deg)'})),
+      state('close', style({transform: 'rotate(90deg)'})),
+      transition('open <=> close',
         animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
       ),
     ])
@@ -31,9 +31,7 @@ export class MenuListItemComponent implements OnInit {
     public router: Router
   ) { }
 
-  ngOnInit() {
-    // console.log(this.item);
-  }
+  ngOnInit() {}
 
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {

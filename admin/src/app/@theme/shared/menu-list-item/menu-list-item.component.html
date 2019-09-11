@@ -1,10 +1,10 @@
 <a (click)="onItemSelected(item)">
-    <span><i class="icon {{item.iconName}}"></i></span>
-    {{item.displayName}} 
-    <span *ngIf="item.children">
-        <i class="icon iconsarrow-up" [ngClass]="{'iconschevron-up': expanded, 'iconschevron-down': !expanded}"></i>
+    <span class="menu-icon"><i class="icon {{item.iconName}}"></i></span>
+    <span class="menu-text">{{item.displayName}}</span>
+    <span *ngIf="item.children" class="menu-arrow">
+        <i class="icon iconschevron-right" [@indicatorRotate]="expanded ? 'close' : 'open'"></i>
     </span>
 </a>
-<ul *ngIf="item.children && item.itemType != 'Section'" [ngClass]="{'expanded': expanded}">
+<ul *ngIf="item.children && item.itemType != 'Section'" [ngClass]="{'expanded': expanded, 'collapsed': !expanded}">
   <li class="menu-list-item" *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></li>
 </ul>

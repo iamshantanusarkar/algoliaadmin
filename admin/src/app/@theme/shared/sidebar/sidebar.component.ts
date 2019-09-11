@@ -14,12 +14,12 @@ export class SidebarComponent implements OnInit {
 
   navItems: NavItem[] = [{
       displayName: 'Dashboard',
-      iconName: 'dashboard',
+      iconName: 'iconslayers',
       route: 'dashboard',
     },
     {
       displayName: 'Reports',
-      iconName: 'reports',
+      iconName: 'iconsbook-open',
       children: [
         {
           displayName: 'Order Report',
@@ -40,7 +40,7 @@ export class SidebarComponent implements OnInit {
     },
     {
       displayName: 'User Management',
-      iconName: 'user',
+      iconName: 'iconsusers',
       children: [
         {
           displayName: 'User',
@@ -55,7 +55,7 @@ export class SidebarComponent implements OnInit {
           iconName: 'group',
         }
       ]
-    }, 
+    },
     {
       displayName: 'Settings',
       iconName: 'iconssettings',
