@@ -1,0 +1,14 @@
+.sidebar-nav {
+  list-style: none; padding: 0;
+  .menu-list-item {
+    color: #f8f8f8;
+    > a {
+      color: #f4f4f4;
+    }
+    ul {
+      padding-left: 15px;
+      list-style: none;
+    }
+  }
+
+}
