@@ -1,4 +1,51 @@
-<p>sidebar works!</p>
-<ul class="sidebar-nav">
-  <li class="menu-list-item" [ngClass]="{'menu-list-section': item.itemType=='Section'}" *ngFor="let item of navItems" [item]="item"></li>
-</ul>
+<div class="thm-aside">
+
+  <div class="thm-aside-brand">
+    <div class="thm-aside-brand-logo">
+      <a href="#"><img src="./assets/media/images/logo-6.png" alt=""></a>
+    </div>
+    <div class="thm-aside-brand-tools">
+      <button class="thm-aside-panel-toggler">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="thm-aside-menu-wrapper">
+    <div class="thm-aside-menu">
+      <ul class="thm-menu-nav">
+        <li class="thm-menu-list-item" [ngClass]="{'menu-list-section': item.itemType=='Section'}" *ngFor="let item of navItems" [item]="item"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="thm-aside-footer">
+    <ul class="thm-aside-footer-nav">
+      <li class="thm-aside-footer-nav-item">
+        <a href="#" class="btn btn-icon">
+          <i class="icon iconssettings"></i>
+        </a>
+      </li>
+      <li class="thm-aside-footer-nav-item">
+        <a href="#" class="btn btn-icon">
+          <i class="icon iconsbox"></i>
+        </a>
+      </li>
+      <li class="thm-aside-footer-nav-item">
+        <a href="#" class="btn btn-icon">
+          <i class="icon iconsbell"></i>
+        </a>
+      </li>
+      <li class="thm-aside-footer-nav-item">
+        <a href="#" class="btn btn-icon">
+          <i class="icon iconshard-drive"></i>
+        </a>
+      </li>
+      <li class="thm-aside-footer-nav-item">
+        <a href="#" class="btn btn-icon">
+          <i class="icon iconscalendar"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

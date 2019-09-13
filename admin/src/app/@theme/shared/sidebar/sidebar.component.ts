@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
-import { NavItem } from '../../../_models/navItem';
+import { NavItem } from '@/_models/navItem';
 
 @Component({
   selector: 'page-sidebar',
@@ -10,7 +10,7 @@ import { NavItem } from '../../../_models/navItem';
 
 export class SidebarComponent implements OnInit {
 
-  //@ViewChild('appDrawer') appDrawer: ElementRef;
+  // @ViewChild('appDrawer') appDrawer: ElementRef;
 
   navItems: NavItem[] = [{
       displayName: 'Dashboard',
