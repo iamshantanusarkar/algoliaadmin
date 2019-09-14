@@ -1,8 +1,8 @@
 import { Component, OnInit, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router } from '@angular/router';
-import { NavItem } from '../../../_models/navItem';
-import { NavService } from '../../../_services/Navservice';
+import { NavItem } from '@/_models/navItem';
+import { NavService } from '@/_services/Navservice';
 
 @Component({
   selector: '.menu-list-item',
@@ -42,5 +42,4 @@ export class MenuListItemComponent implements OnInit {
       this.expanded = !this.expanded;
     }
   }
-
 }
