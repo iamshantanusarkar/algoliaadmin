@@ -1,10 +1,14 @@
 <a (click)="onItemSelected(item)">
-    <span class="menu-icon"><i class="icon {{item.iconName}}"></i></span>
-    <span class="menu-text">{{item.displayName}}</span>
-    <span *ngIf="item.children" class="menu-arrow">
-        <i class="icon iconschevron-right" [@indicatorRotate]="expanded ? 'close' : 'open'"></i>
-    </span>
+  <span class="thm-menu-icon"><i class="icon {{item.iconName}}"></i></span>
+  <span class="thm-menu-text">{{item.displayName}}</span>
+  <span class="thm-menu-badge"><span class="badge badge-brand">2</span></span>
+  <span *ngIf="item.children" class="thm-menu-arrow">
+    <i class="icon iconschevron-right" [@indicatorRotate]="expanded ? 'close' : 'open'"></i>
+  </span>
 </a>
-<ul *ngIf="item.children && item.itemType != 'Section'" [ngClass]="{'expanded': expanded, 'collapsed': !expanded}">
-  <li class="menu-list-item" *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></li>
-</ul>
+<div class="thm-menu-submenu">
+  <ul *ngIf="item.children && item.itemType != 'Section'" [ngClass]="{'expanded': expanded, 'collapsed': !expanded}">
+    <li class="thm-menu-list-item" *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></li>
+  </ul>
+</div>
+

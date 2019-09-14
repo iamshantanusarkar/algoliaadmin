@@ -4,7 +4,7 @@ import {
   NgZone,
   Renderer,
   ElementRef,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
 
 import {

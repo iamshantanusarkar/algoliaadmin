@@ -1,16 +1,12 @@
 <div class="page-wrapper">
-  <div class="sidebar">
-    <page-sidebar></page-sidebar>
-  </div>
-  <div class="main">
-    <header>
-      <page-header></page-header>
-    </header>
-    <main class="content">
+  <aside class="thm-aside thm-aside-fixed"></aside>
+  <div class="thm-content-wrapper">
+    <header class="thm-header"></header>
+    <main class="thm-content">
       <ng-content></ng-content>
     </main>
-    <div class="footer">
+    <footer class="footer">
       <page-footer></page-footer>
-    </div>
+    </footer>
   </div>
 </div>

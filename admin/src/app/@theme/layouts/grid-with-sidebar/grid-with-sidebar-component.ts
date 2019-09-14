@@ -8,5 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 
 export class LayoutGridWithSidebar implements OnInit {
+
+  constructor() {}
+
   ngOnInit() {}
+
 }

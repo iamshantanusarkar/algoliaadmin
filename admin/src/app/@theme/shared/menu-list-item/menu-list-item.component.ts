@@ -5,7 +5,7 @@ import { NavItem } from '@/_models/navItem';
 import { NavService } from '@/_services/Navservice';
 
 @Component({
-  selector: '.menu-list-item',
+  selector: '.thm-menu-list-item',
   templateUrl: './menu-list-item.component.html',
   encapsulation: ViewEncapsulation.None,
   animations: [
