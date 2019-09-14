@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@an
 import { NavItem } from '@/_models/navItem';
 
 @Component({
-  selector: 'page-sidebar',
+  selector: '.thm-aside',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
   encapsulation: ViewEncapsulation.None

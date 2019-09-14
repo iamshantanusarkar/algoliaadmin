@@ -1,37 +1,147 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+<div class="thm-header-menu-wrapper">
+  <div class="thm-header-menu">
+    <ul class="thm-menu-nav">
+      <li class="thm-menu-item">
+        <a href="#" class="thm-menu-link">Pages1</a>
+        <div class="thm-menu-submenu"></div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="thm-menu-item">
+        <a href="#" class="thm-menu-link">Pages2</a>
+        <div class="thm-menu-submenu"></div>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <li class="thm-menu-item">
+        <a href="#" class="thm-menu-link">Pages3</a>
+        <div class="thm-menu-submenu"></div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
-</nav>
+</div>
+<div class="thm-header-topbar">
+  <div class="thm-header-topbar-item">
+    <div class="thm-header-topbar-wrapper" data-toggle="dropdown" aria-expanded="true">
+      <div class="thm-header-topbar-icon">
+        <i class="icon iconsbell"></i>
+        <span class="badge badge-dot badge-default"></span>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="thm-head">
+        <h3 class="thm-head-title">User Notifications</h3>
+        <div class="thm-head-sub"><span class="thm-head-sub-desc">23 new notifications</span></div>
+      </div>
+      <div class="thm-notification">
+        <a href="#" class="thm-notification-item">
+          <div class="thm-notification-item"><i class="icon iconssettings"></i></div>
+          <div class="thm-notification-item-details">
+            <div class="thm-notification-item-title">New order has been received</div>
+            <div class="thm-notification-item-time">2 hrs ago</div>
+          </div>
+        </a>
+        <a href="#" class="thm-notification-item">
+          <div class="thm-notification-item"><i class="icon iconssettings"></i></div>
+          <div class="thm-notification-item-details">
+            <div class="thm-notification-item-title">New order has been received</div>
+            <div class="thm-notification-item-time">2 hrs ago</div>
+          </div>
+        </a>
+        <a href="#" class="thm-notification-item">
+          <div class="thm-notification-item"><i class="icon iconssettings"></i></div>
+          <div class="thm-notification-item-details">
+            <div class="thm-notification-item-title">New order has been received</div>
+            <div class="thm-notification-item-time">2 hrs ago</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="thm-header-topbar-item">
+    <div class="thm-header-topbar-wrapper" data-toggle="dropdown" aria-expanded="true">
+      <div class="thm-header-topbar-icon">
+        <img src="./assets/media/images/020-flag.svg" alt="">
+      </div>
+    </div>
+    <div class="dropdown">
+      <ul class="thm-nav">
+        <li class="thm-nav-item">
+          <a href="#" class="thm-nav-link">
+            <span class="thm-nav-link-icon">
+              <img src="./assets/media/images/020-flag.svg" alt="">
+            </span>
+            <span class="thm-nav-link-text"></span>
+          </a>
+        </li>
+        <li class="thm-nav-item">
+          <a href="#" class="thm-nav-link">
+            <span class="thm-nav-link-icon">
+              <img src="./assets/media/images/016-spain.svg" alt="">
+            </span>
+            <span class="thm-nav-link-text"></span>
+          </a>
+        </li>
+        <li class="thm-nav-item">
+          <a href="#" class="thm-nav-link">
+            <span class="thm-nav-link-icon">
+              <img src="./assets/media/images/017-germany.svg" alt="">
+            </span>
+            <span class="thm-nav-link-text"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="thm-header-topbar-item">
+    <div class="thm-header-topbar-wrapper" data-toggle="dropdown" aria-expanded="true">
+      <div class="thm-header-topbar-user">
+        <span class="thm-header-topbar-welcome">Hi</span>
+        <span class="thm-header-topbar-username">Paw!!</span>
+        <img src="./assets/media/images/300_25.jpg" alt="" class="thm-img-rounded">
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="thm-user-card" style="background-image: url(./assets/media/images/head_bg_sm.jpg)">
+        <div class="thm-user-card-wrapper">
+          <div class="thm-user-card-pic">
+            <img src="./assets/media/images/300_25.jpg" alt="">
+          </div>
+          <div class="thm-user-card-details">
+            <div class="thm-user-card-name">Shantanu Sarkar</div>
+            <div class="thm-user-card-position">Web Developer</div>
+          </div>
+        </div>
+        <ul class="thm-nav">
+          <li class="thm-nav-item">
+            <a href="#" class="thm-nav-link">
+              <span class="thm-nav-icon"><i class="icon iconsarchive"></i></span>
+              <span class="thm-nav-link-text">My Profile</span>
+            </a>
+          </li>
+          <li class="thm-nav-item">
+            <a href="#" class="thm-nav-link">
+              <span class="thm-nav-icon"><i class="icon iconslist"></i></span>
+              <span class="thm-nav-link-text">My Tasks</span>
+            </a>
+          </li>
+          <li class="thm-nav-item">
+            <a href="#" class="thm-nav-link">
+              <span class="thm-nav-icon"><i class="icon iconsmessage-square"></i></span>
+              <span class="thm-nav-link-text">Messages</span>
+            </a>
+          </li>
+          <li class="thm-nav-item">
+            <a href="#" class="thm-nav-link">
+              <span class="thm-nav-icon"><i class="icon iconssettings"></i></span>
+              <span class="thm-nav-link-text">Settings</span>
+            </a>
+          </li>
+          <li class="thm-nav-separator"></li>
+          <li class="thm-nav-item-custom space-between">
+            <a href="#" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
+            <i class="icon iconsinfo" data-toggle="tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="thm-header-topbar-item"></div>
+  <div class="thm-header-topbar-item"></div>
+</div>
