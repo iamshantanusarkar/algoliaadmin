@@ -1,0 +1,282 @@
+.thm-aside {
+
+  .thm-aside-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 25px;
+    height: 75px;
+
+    .thm-aside-brand-logo {
+      display: flex;
+      justify-content: flex-begin;
+    }
+    .thm-aside-brand-tools {
+      display: flex;
+      justify-content: flex-end;
+
+      .thm-aside-panel-toggler {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        text-indent: -9999px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+        outline: none !important;
+        width: 26px;
+        height: 26px;
+        transition: all 0.4s ease;
+
+        span {
+          background: #4e4c5f;
+          display: block;
+          position: absolute;
+          top: 12px;
+          height: 2px;
+          min-height: 2px;
+          width: 100%;
+          border-radius: 2px;
+          transition: all 0.4s ease;
+
+          &:before, &:after {
+            background: #484f66;
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            min-height: 2px;
+            content: "";
+            border-radius: 2px;
+            transition: all 0.4s ease;
+          }
+
+          &:before {
+            top: -8px;
+          }
+
+          &:after {
+            bottom: -8px;
+          }
+        }
+      }
+    }
+  }
+
+  .thm-aside-menu-wrapper {
+    flex: 1 0 auto;
+
+    .thm-aside-menu {
+      margin: 15px 0;
+      background-color: #242939;
+
+      .thm-menu-nav {
+        margin: 0;
+        list-style: none;
+        padding: 15px 0;
+
+        .thm-menu-list-item {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          float: none;
+          padding: 0;
+
+          .thm-menu-link {
+            cursor: pointer;
+            min-height: 44px;
+            display: flex;
+            flex-grow: 1;
+            align-items: stretch;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            position: relative;
+            outline: none;
+
+            .thm-menu-icon {
+              color: #434d6b;
+              flex: 0 0 30px;
+              font-size: 1.3rem;
+              display: flex;
+              align-items: center;
+              line-height: 0;
+            }
+            .thm-icon-bullet {
+              display: flex;
+              align-items: center;
+              line-height: 0;
+            }
+            .thm-menu-text {
+              font-weight: 400;
+              font-size: 1rem;
+              text-transform: initial;
+              color: #c0c4d1;
+              display: flex;
+              align-items: center;
+              flex-grow: 1;
+              padding: 0;
+            }
+            .thm-menu-badge { display: none; }
+            .thm-menu-arrow {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              line-height: 0;
+              flex: 0 0 20px;
+              font-size: 0.7rem;
+              color: #687393;
+            }
+
+          }
+          .thm-menu-submenu {
+            display: none;
+            float: none;
+            margin: 0;
+            padding: 0;
+
+            .thm-menu-subnav {
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+              padding: 0;
+              margin: 0;
+              list-style: none !important;
+
+              .thm-menu-link {
+                padding: 0 30px;
+                padding-left: 45px;
+
+                .thm-icon-bullet {
+                  vertical-align: middle;
+                  text-align: left;
+                  flex: 0 0 20px;
+
+                  span {
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 100%;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-color: #687393;
+                  }
+                }
+              }
+            }
+          }
+
+          &:hover {
+            > .thm-menu-link {
+              background-color: #1f2433;
+
+              .thm-menu-icon, .thm-menu-arrow i {
+                color: #5d78ff;
+              }
+              .thm-menu-text {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        > .thm-menu-list-item {
+          position: relative;
+          margin: 0;
+
+          > .thm-menu-link {
+            padding: 9px 30px;
+          }
+
+          &.thm-menu-item-open {
+            transition: background-color 0.3s;
+
+            .thm-menu-submenu {
+              display: flex;
+              flex-grow: 1;
+              flex-direction: column;
+            }
+
+            > .kt-menu__inner {
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+            }
+
+            > .thm-menu-link {
+              background-color: #1f2433;
+            }
+          }
+        }
+
+        .thm-menu-list-section {
+          display: flex;
+          padding: 0 27px;
+          margin: 20px 0 0 0;
+          height: 40px;
+
+          .thm-menu-list-section-text {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            font-size: 0.83rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            color: #606a8c;
+          }
+        }
+      }
+    }
+  }
+
+  .thm-aside-footer {
+    background-color: #1f2231;
+    flex: none;
+
+    .thm-aside-footer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 30px;
+
+      .thm-aside-footer-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+          height: 45px;
+          width: 45px;
+          transition: all 0.3s;
+          background-color: transparent;
+          border-radius: 50%;
+
+          i {
+            transition: all 0.3s;
+            color: #364b8b;
+            font-size: 1.4rem;
+          }
+
+          &:hover {
+            transition: all 0.3s;
+            background-color: #191b27;
+
+            i {
+              transition: all 0.3s;
+              color: #5d78ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

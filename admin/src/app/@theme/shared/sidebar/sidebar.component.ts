@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@an
 import { NavItem } from '@/_models/navItem';
 
 @Component({
-  selector: 'page-sidebar',
+  selector: '.thm-aside',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
   encapsulation: ViewEncapsulation.None
@@ -10,8 +10,9 @@ import { NavItem } from '@/_models/navItem';
 
 export class SidebarComponent implements OnInit {
 
-  navItems: NavItem[] = [
-    {
+  // @ViewChild('appDrawer') appDrawer: ElementRef;
+
+  navItems: NavItem[] = [{
       displayName: 'Dashboard',
       iconName: 'iconslayers',
       route: 'dashboard',
@@ -22,12 +23,10 @@ export class SidebarComponent implements OnInit {
       children: [
         {
           displayName: 'Order Report',
-          iconName: 'none',
           route: 'report/order',
         },
         {
           displayName: 'Customer Report',
-          iconName: 'none',
           route: 'report/customer',
         }
       ]
@@ -43,15 +42,12 @@ export class SidebarComponent implements OnInit {
       children: [
         {
           displayName: 'User',
-          iconName: 'group',
         },
         {
           displayName: 'Role',
-          iconName: 'group',
         },
         {
           displayName: 'Group',
-          iconName: 'group',
         }
       ]
     },

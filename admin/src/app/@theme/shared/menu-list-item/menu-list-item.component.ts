@@ -10,8 +10,8 @@ import { NavService } from '@/_services/Navservice';
   encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('indicatorRotate', [
-      state('open', style({transform: 'rotate(0deg)'})),
-      state('close', style({transform: 'rotate(90deg)'})),
+      state('open', style({ transform: 'rotate(0deg)' })),
+      state('close', style({ transform: 'rotate(90deg)' })),
       transition('open <=> close',
         animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
       ),
@@ -21,8 +21,11 @@ import { NavService } from '@/_services/Navservice';
 
 export class MenuListItemComponent implements OnInit {
 
-  expanded: boolean;
+  expanded: boolean = false;
+
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
+  @HostBinding('class.thm-menu-item-open') addClass: boolean = this.expanded;
+
   @Input() item: NavItem;
   @Input() depth: number;
 
@@ -31,7 +34,7 @@ export class MenuListItemComponent implements OnInit {
     public router: Router
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
@@ -40,6 +43,7 @@ export class MenuListItemComponent implements OnInit {
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
+      this.addClass = this.ariaExpanded = this.expanded;
     }
   }
 }
