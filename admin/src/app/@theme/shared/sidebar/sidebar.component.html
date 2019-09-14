@@ -12,37 +12,42 @@
 <div class="thm-aside-menu-wrapper">
   <div class="thm-aside-menu">
     <ul class="thm-menu-nav">
-      <li class="thm-menu-list-item" [ngClass]="{'menu-list-section': item.itemType=='Section'}" *ngFor="let item of navItems" [item]="item"></li>
+      <ng-container *ngFor="let item of navItems">
+        <li class="thm-menu-list-item" *ngIf="item.itemType!='Section'" [item]="item"></li>
+        <li class="thm-menu-list-section" *ngIf="item.itemType=='Section'">
+          <h4 class="thm-menu-list-section-text">{{item.displayName}}</h4>
+        </li>
+      </ng-container>
     </ul>
   </div>
 </div>
 
 <div class="thm-aside-footer">
-  <ul class="thm-aside-footer-nav">
-    <li class="thm-aside-footer-nav-item">
+  <div class="thm-aside-footer-nav">
+    <div class="thm-aside-footer-nav-item">
       <a href="#" class="btn btn-icon">
         <i class="icon iconssettings"></i>
       </a>
-    </li>
-    <li class="thm-aside-footer-nav-item">
+    </div>
+    <div class="thm-aside-footer-nav-item">
       <a href="#" class="btn btn-icon">
         <i class="icon iconsbox"></i>
       </a>
-    </li>
-    <li class="thm-aside-footer-nav-item">
+    </div>
+    <div class="thm-aside-footer-nav-item">
       <a href="#" class="btn btn-icon">
         <i class="icon iconsbell"></i>
       </a>
-    </li>
-    <li class="thm-aside-footer-nav-item">
+    </div>
+    <div class="thm-aside-footer-nav-item">
       <a href="#" class="btn btn-icon">
         <i class="icon iconshard-drive"></i>
       </a>
-    </li>
-    <li class="thm-aside-footer-nav-item">
+    </div>
+    <div class="thm-aside-footer-nav-item">
       <a href="#" class="btn btn-icon">
         <i class="icon iconscalendar"></i>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
