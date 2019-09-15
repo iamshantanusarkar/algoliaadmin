@@ -67,6 +67,54 @@
             bottom: -8px;
           }
         }
+
+        &.thm-aside-panel-toggler-left {
+
+          span {
+
+            &:before {
+              left: auto;
+              right: 0px;
+              width: 50%;
+            }
+            &:after {
+              left: auto;
+              right: 0px;
+              width: 75%;
+            }
+          }
+        }
+        &.thm-aside-panel-toggler-right {
+
+          span {
+
+            &:before {
+              left: 0px;
+              right: auto;
+              width: 50%;
+            }
+            &:after {
+              left: 0px;
+              right: auto;
+              width: 75%;
+            }
+          }
+        }
+
+        &.thm-aside-panel-toggler-left, &.thm-aside-panel-toggler-right {
+
+          &:hover {
+
+            span {
+              background: #fff;
+
+              &:before, &:after {
+                background: #fff;
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }

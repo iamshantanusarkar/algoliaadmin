@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   selector: '.dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  // encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None,
 })
 export class DashboardComponent implements OnInit, ComponentCanDeactivate {
 
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit, ComponentCanDeactivate {
     // insert logic to check if there are pending changes here;
     // returning true will navigate without confirmation
     // returning false will show a confirm dialog before navigating away
-    return false;
+    return true;
   }
 
   closed = false;

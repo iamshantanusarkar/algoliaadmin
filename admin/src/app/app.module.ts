@@ -25,7 +25,11 @@ import { AppComponent } from './app.component';
         AuthModule,
         PagesModule
     ],
-    providers: [PendingChangesGuard],
-    bootstrap: [AppComponent]
+    providers: [
+      PendingChangesGuard
+    ],
+    bootstrap: [
+      AppComponent,
+    ]
 })
 export class AppModule { }

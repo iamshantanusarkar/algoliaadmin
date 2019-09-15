@@ -18,7 +18,8 @@
   'layout/header',
   'layout/footer',
   'layout/sidebar',
-  'layout/forms';
+  'layout/forms',
+  'layout/page';
 
 @import
   'components/buttons';
@@ -31,3 +32,4 @@
 
 // * { box-shadow: 0 0 0 1px }
 // body { color: red; }
+html, body { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 300; }

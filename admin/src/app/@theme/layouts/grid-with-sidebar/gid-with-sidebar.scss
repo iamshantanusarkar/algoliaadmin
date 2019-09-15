@@ -1,6 +1,9 @@
 .page-wrapper {
   width:100%;
   background-color: #F0F1F7;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: row;
 
   .thm-aside {
     width: 260px;
@@ -28,5 +31,11 @@
     flex-direction: column;
     flex: 1 auto;
     transition: all 0.3s ease;
+  }
+
+  .thm-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
   }
 }
