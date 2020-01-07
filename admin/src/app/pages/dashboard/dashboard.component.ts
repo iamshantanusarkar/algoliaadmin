@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 import { ComponentCanDeactivate } from '@/_guards/pending-changes.guard';
-import { HostListener } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,7 +19,7 @@ export class DashboardComponent implements OnInit, ComponentCanDeactivate {
     return true;
   }
 
-  closed = false;
+  closed = true;
 
   constructor() { }
 

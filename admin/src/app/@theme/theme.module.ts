@@ -30,12 +30,12 @@ const COMPONENTS = [
   // AccordianModule,
   AlertModule,
   // CarouselModule,
-  // DatatableModule,
-  // DropdownModule,
+  DatatableModule,
+  DropdownModule,
   // ModalModule,
   // PopoverModule,
   // ToastModule,
-  // TooltipModule
+  TooltipModule
 ];
 
 const LAYOUTS = [

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  template: `Order Report Works`
+  templateUrl: './order-report.component.html'
 })
 
 export class OrderReportComponent implements OnInit {
 
+  closed = false;
   constructor() {}
 
   ngOnInit() {

@@ -1,0 +1,45 @@
+<div class="thm-subheader thm-subheader-fixed">
+  <div class="thm-container">
+     <div class="thm-subheader-main">
+        <h3 class="thm-subheader-title">Order Report</h3>
+        <span class="thm-subheader-separator thm-subheader-separator-v"></span>
+        <div class="thm-subheader-toolbar">
+           <span class="thm-subheader-desc">450 Total</span>
+           <form class="thm-subheader-search">
+              <div class="input-group">
+                 <input type="text" class="form-control" placeholder="Search...">
+                 <div class="input-group-append"> <span class="input-group-text">
+                    <i class="flaticon2-search-1"></i>
+                    </span>
+                 </div>
+              </div>
+           </form>
+        </div>
+        <div class="thm-subheader-toolbar thm-hidden">
+           <div class="thm-subheader-desc"><span>0</span> Selected:</div>
+        </div>
+     </div>
+     <div class="thm-subheader-toolbar">
+        <a href="#" class=""></a> <a href="?page=custom/users/add&amp;demo=demo1" class="btn btn-brand btn-bold">
+        Add User                    </a>
+     </div>
+  </div>
+</div>
+
+<div class="thm-container kt-grid__item kt-grid__item--fluid" style="margin-top: 100px;">
+  <div *ngIf="!closed" class="alert" [dismissible]="true" type="success" (close)="closed = true">Here is an alert!!</div>
+
+  <!-- <button class="btn btn-primary" placement="top" data-tooltip="Tooltip on top">Click me!</button> -->
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="top" Tooltip="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="right" Tooltip="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" Tooltip="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="left" Tooltip="Tooltip on left">
+    Tooltip on left
+  </button>
+</div>

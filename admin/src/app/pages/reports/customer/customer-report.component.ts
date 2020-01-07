@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  template: `Customer Report Works`
+  templateUrl: './customer-report.component.html',
 })
 
 export class CustomerReportComponent implements OnInit {
